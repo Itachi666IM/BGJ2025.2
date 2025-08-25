@@ -5,7 +5,7 @@ public class DragAndDrop : MonoBehaviour
     private bool isDragging = false;
     private Rigidbody currentlyDraggedRigidbody;
     private Vector3 offset;
-    private int originalLayer;
+    //private int originalLayer;
 
     [Header("Smooth Movement")]
     public float smoothSpeed = 5f;
@@ -29,10 +29,10 @@ public class DragAndDrop : MonoBehaviour
                         isDragging = true;
                         currentlyDraggedRigidbody = hitRigidbody;
 
-                        originalLayer = currentlyDraggedRigidbody.gameObject.layer;
+                        //originalLayer = currentlyDraggedRigidbody.gameObject.layer;
 
-                        int temporaryLayer = LayerMask.NameToLayer("TemporaryLayer");
-                        currentlyDraggedRigidbody.gameObject.layer = temporaryLayer;
+                        //int temporaryLayer = LayerMask.NameToLayer("TemporaryLayer");
+                        //currentlyDraggedRigidbody.gameObject.layer = temporaryLayer;
 
                         offset = currentlyDraggedRigidbody.transform.position - hit.point;
 
@@ -50,7 +50,7 @@ public class DragAndDrop : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
-                currentlyDraggedRigidbody.gameObject.layer = originalLayer;
+                //currentlyDraggedRigidbody.gameObject.layer = originalLayer;
 
                 isDragging = false;
                 currentlyDraggedRigidbody.isKinematic = false;
