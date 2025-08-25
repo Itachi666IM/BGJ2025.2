@@ -11,7 +11,7 @@ public class FactoryPlayerMovement : MonoBehaviour
     private void Awake()
     {
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
         rb = GetComponent<Rigidbody>();
            
     }
