@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     Vector2 turn;
     public bool isCursorLocked = false;
+    [SerializeField] GameObject torch;
     private void Start()
     {
         if(isCursorLocked)
@@ -24,9 +25,23 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         Rotate();
-
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SwitchTorch();
+        }
     }
 
+    public void SwitchTorch()
+    {
+        if(torch.GetComponent<Light>().enabled == true)
+        {
+            torch.GetComponent<Light>().enabled = false;
+        }
+        else
+        {
+            torch.GetComponent<Light>().enabled = true;
+        }
+    }
     void Movement()
     {
         float x = Input.GetAxis("Horizontal");
