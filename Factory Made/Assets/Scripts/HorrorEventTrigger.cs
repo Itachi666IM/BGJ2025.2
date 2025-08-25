@@ -18,6 +18,7 @@ public class HorrorEventTrigger : MonoBehaviour
             if(!once)
             {
                 triggerEvent?.Invoke();
+                once = true;
             }
         }
     }

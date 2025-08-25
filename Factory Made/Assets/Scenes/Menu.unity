@@ -1421,6 +1421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuMusic: {fileID: 8300000, guid: 50b85f1708ef3f0449c5342e3bcb5e09, type: 3}
+  horrorMusic: {fileID: 8300000, guid: 7214bee492093b14f9ddb5165cc7fe69, type: 3}
 --- !u!1 &1552930398
 GameObject:
   m_ObjectHideFlags: 0
