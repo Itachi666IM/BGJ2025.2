@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     AudioSource myAudio;
     [SerializeField] AudioClip menuMusic;
     [SerializeField] AudioClip horrorMusic;
+    [SerializeField] Slider volumeSlider;
     private void Awake()
     {
         myAudio = GetComponent<AudioSource>();
@@ -37,5 +38,10 @@ public class AudioManager : MonoBehaviour
         {
             myAudio.Play();
         }
+    }
+
+    public void UpdateVolume()
+    {
+        myAudio.volume = volumeSlider.value;
     }
 }
