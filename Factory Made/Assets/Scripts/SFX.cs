@@ -1,8 +1,9 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SFX : MonoBehaviour
 {
     AudioSource myAudio;
+    [SerializeField] Slider volumeSlider;
     private void Awake()
     {
         myAudio = GetComponent<AudioSource>();
@@ -25,5 +26,10 @@ public class SFX : MonoBehaviour
     public void PlayAnySFX(AudioClip audioClip)
     {
         myAudio.PlayOneShot(audioClip);
+    }
+
+    public void UpdateVolume()
+    {
+        myAudio.volume = volumeSlider.value;
     }
 }
