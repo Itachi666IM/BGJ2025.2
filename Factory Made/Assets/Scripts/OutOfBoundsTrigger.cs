@@ -32,6 +32,7 @@ public class OutOfBoundsTrigger : MonoBehaviour
 
     IEnumerator RestartScene()
     {
+        warningText.text = "";
         string randomSentence = warningSentences[Random.Range(0, warningSentences.Length)];
         StartCoroutine(Type(randomSentence));
         yield return new WaitUntil(() => warningText.text == randomSentence);
