@@ -21,9 +21,5 @@ public class ObejctiveTextManager : MonoBehaviour
             currentObjective = objectives[index];
             objectiveText.text = currentObjective;
         }
-        else
-        {
-            objectiveText.text = "You Survived!";
-        }
     }
 }

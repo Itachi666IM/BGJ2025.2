@@ -12,7 +12,7 @@ public class Torch : MonoBehaviour
         if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit,detectRange,ghostLayer))
         {
             Debug.Log("Ghost Detected");
-            hit.collider.gameObject.SetActive(false);
+            hit.collider.GetComponent<Ghost>().GhostDeath();
         }
     }
 }
