@@ -35,7 +35,7 @@ public class DialogueTextManager : MonoBehaviour
         foreach( char c in  currentDialogue.ToCharArray())
         {
             dialogueText.text += c.ToString();
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.02f);
         }
         yield return new WaitForSeconds(waitTime);
         dialogueText.text = "";
