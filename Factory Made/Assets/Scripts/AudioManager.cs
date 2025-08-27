@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
     AudioSource myAudio;
     [SerializeField] AudioClip menuMusic;
     [SerializeField] AudioClip horrorMusic;
+    [SerializeField] AudioClip factoryMusic;
     [SerializeField] Slider volumeSlider;
     private void Awake()
     {
@@ -34,7 +35,11 @@ public class AudioManager : MonoBehaviour
         {
             myAudio.clip = horrorMusic;
         }
-        if(!myAudio.isPlaying)
+        if(SceneManager.GetActiveScene().name == "FactoryLevel")
+        {
+            myAudio.clip = factoryMusic;
+        }
+        if (!myAudio.isPlaying)
         {
             myAudio.Play();
         }

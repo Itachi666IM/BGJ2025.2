@@ -2789,6 +2789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuMusic: {fileID: 8300000, guid: 50b85f1708ef3f0449c5342e3bcb5e09, type: 3}
   horrorMusic: {fileID: 8300000, guid: 7214bee492093b14f9ddb5165cc7fe69, type: 3}
+  factoryMusic: {fileID: 8300000, guid: 31037f783f2e1b34db9ad4858cda1e2e, type: 3}
   volumeSlider: {fileID: 1969664737}
 --- !u!1 &1500646102
 GameObject:
