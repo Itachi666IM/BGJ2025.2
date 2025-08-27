@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     Vector2 turn;
     public bool isCursorLocked = false;
     [SerializeField] GameObject torch;
+    [SerializeField] Image torchImage;
+    [SerializeField] Sprite torchOff;
+    [SerializeField] Sprite torchOn;
+    private bool isActive = false;
     private void Start()
     {
         if(isCursorLocked)
@@ -33,13 +35,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void SwitchTorch()
     {
-        if(torch.GetComponent<Light>().enabled == true)
+        if(isActive)
         {
-            torch.GetComponent<Light>().enabled = false;
+            torch.SetActive(false);
+            torchImage.sprite = torchOff;
+            isActive = false;
         }
         else
         {
-            torch.GetComponent<Light>().enabled = true;
+            torch.SetActive(true);
+            torchImage.sprite = torchOn;
+            isActive = true;
         }
     }
     void Movement()

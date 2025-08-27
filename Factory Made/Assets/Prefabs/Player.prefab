@@ -131,6 +131,9 @@ MonoBehaviour:
   gravity: -9.81
   isCursorLocked: 1
   torch: {fileID: 6109616525136256681}
+  torchImage: {fileID: 0}
+  torchOff: {fileID: 21300000, guid: a03eda07f59e30a45b7cf8272689a0cb, type: 3}
+  torchOn: {fileID: 21300000, guid: 9a1a359ffb99a1749ba9e17478cc3179, type: 3}
 --- !u!143 &832909276668916775
 CharacterController:
   m_ObjectHideFlags: 0
@@ -174,7 +177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4789920843153268081
 Transform:
   m_ObjectHideFlags: 0
@@ -197,7 +200,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6109616525136256681}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
