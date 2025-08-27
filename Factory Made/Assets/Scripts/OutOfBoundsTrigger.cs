@@ -23,8 +23,9 @@ public class OutOfBoundsTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "drag")
+        if(other.tag == "drag" && other.GetComponent<Sack>()!=null)
         {
+            Destroy(other.gameObject);
             StartCoroutine(RestartScene());
            
         }
