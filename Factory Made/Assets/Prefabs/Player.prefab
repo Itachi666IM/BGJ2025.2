@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 4789920843153268081}
   - component: {fileID: 8872025265240197061}
   - component: {fileID: 3800958691109604164}
+  - component: {fileID: 8840968265786722061}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -277,6 +278,22 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &8840968265786722061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109616525136256681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45d95f106cab8f4f8ef02adc5e9de1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectRange: 10
+  ghostLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &8737081930359489504
 GameObject:
   m_ObjectHideFlags: 0
