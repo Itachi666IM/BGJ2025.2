@@ -1,15 +1,19 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.Events;
 public class HangarTaskDialog : MonoBehaviour
 {
     private TMP_Text hangarTaskText;
     public string[] sentences;
     public float typeSpeed;
 
+    public UnityEvent hangarEvent;
+
     private void Awake()
     {
         hangarTaskText = GetComponent<TMP_Text>();
+        hangarEvent?.Invoke();
     }
     private void Start()
     {
