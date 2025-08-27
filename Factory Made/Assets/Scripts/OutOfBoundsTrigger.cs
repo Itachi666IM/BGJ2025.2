@@ -7,10 +7,15 @@ public class OutOfBoundsTrigger : MonoBehaviour
 
     [SerializeField] private TMP_Text warningText;
     public string[] warningSentences;
+    public AudioClip[] sfxClips;
     public float typeSpeed;
+    private AudioSource sfxPlayer;
+
+
     private void Awake()
     {
         warningText.text = "";
+        sfxPlayer = GetComponent<AudioSource>();
     }
     IEnumerator Type(string sentence)
     {
@@ -35,6 +40,8 @@ public class OutOfBoundsTrigger : MonoBehaviour
     {
         warningText.text = "";
         string randomSentence = warningSentences[Random.Range(0, warningSentences.Length)];
+        AudioClip randomSFX = sfxClips[Random.Range(0, sfxClips.Length)];
+        sfxPlayer.PlayOneShot(randomSFX);
         StartCoroutine(Type(randomSentence));
         yield return new WaitUntil(() => warningText.text == randomSentence);
         yield return new WaitForSeconds(3f);
