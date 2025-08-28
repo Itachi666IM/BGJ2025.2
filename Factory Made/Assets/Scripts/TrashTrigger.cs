@@ -8,6 +8,7 @@ public class TrashTrigger : MonoBehaviour
     [SerializeField] private TMP_Text trashText;
     [SerializeField] private TMP_Text trashEndSceneText;
     [SerializeField] private AudioClip thudSound;
+    [SerializeField] private AudioClip applause;
     private SFX sfxPlayer;
     public string[] sentences;
     private int totalTrash;
@@ -53,6 +54,7 @@ public class TrashTrigger : MonoBehaviour
 
     IEnumerator EndScene()
     {
+        sfxPlayer.PlayAnySFX(applause);
         for(int i = 0; i< sentences.Length; i++)
         {
             trashEndSceneText.text = "";

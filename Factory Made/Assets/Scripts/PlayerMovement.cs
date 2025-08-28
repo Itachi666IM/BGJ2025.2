@@ -15,6 +15,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Sprite torchOff;
     [SerializeField] Sprite torchOn;
     private bool isActive = false;
+    SFX sfx;
+    [SerializeField] AudioClip torchSound;
+    private void Awake()
+    {
+        sfx = FindAnyObjectByType<SFX>();
+    }
     private void Start()
     {
         if(isCursorLocked)
@@ -37,12 +43,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isActive)
         {
+            sfx.PlayAnySFX(torchSound);
             torch.SetActive(false);
             torchImage.sprite = torchOff;
             isActive = false;
         }
         else
         {
+            sfx.PlayAnySFX(torchSound);
             torch.SetActive(true);
             torchImage.sprite = torchOn;
             isActive = true;

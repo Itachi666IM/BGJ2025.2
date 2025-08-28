@@ -57,7 +57,7 @@ public class HorrorLevelManager : MonoBehaviour
 
     public void DelayInLoadingScene()
     {
-        Invoke(nameof(WinScene), 1f);
+        Invoke(nameof(WinScene), 0.25f);
     }
 
 }
