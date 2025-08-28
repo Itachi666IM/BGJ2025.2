@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class HorrorLevelManager : MonoBehaviour
 {
     SFX sfx;
-
+    
+    GameObject currentEvent;
+    bool canInteract = false;
     private void Awake()
     {
         sfx = FindAnyObjectByType<SFX>();
@@ -20,4 +23,31 @@ public class HorrorLevelManager : MonoBehaviour
             sfx.PlayAnySFX(clip);
         }
     }
+
+    public void CanInteractWithObject(GameObject eventTrigger)
+    {
+        canInteract = true;
+        currentEvent = eventTrigger;
+        
+    }
+
+    public void Interact()
+    {
+        currentEvent.SetActive(true);
+        currentEvent.GetComponent<InteractableEventTrigger>().UseEvent();
+    }
+
+    private void Update()
+    {
+        if(canInteract)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+                canInteract = false;
+            }
+            
+        }
+    }
+
 }
