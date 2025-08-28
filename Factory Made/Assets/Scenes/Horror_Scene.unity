@@ -1605,7 +1605,7 @@ MonoBehaviour:
         m_MethodName: PlaySoundEffect
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: a0728298ada411c46b46b1c71c4404ee, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: bae28252d5f8d4142b452a0fab0b8f4e, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2353,7 +2353,7 @@ MonoBehaviour:
   - Almost at the exit...
   - I am never coming back here
   dialogueText: {fileID: 681920937}
-  waitTime: 2
+  waitTime: 1.5
 --- !u!1001 &712687188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3126,6 +3126,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1415378785}
+        m_TargetAssemblyTypeName: HorrorLevelManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 48360d906ad41e44183cd43aa474e31f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!65 &949891183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3602,7 +3614,7 @@ Transform:
   m_GameObject: {fileID: 1136611559}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 9.69, y: 2.27, z: -20.415}
+  m_LocalPosition: {x: 9.69, y: 2.27, z: -19.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3711,6 +3723,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1415378785}
+        m_TargetAssemblyTypeName: HorrorLevelManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 2eef03e3e5f80cb4884a19dd28605e28, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4835,7 +4859,7 @@ MonoBehaviour:
         m_MethodName: PlaySoundEffect
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 7ee8e2a45c3c2e04fb87d1b31e7abff5, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: c132b96686679e84693adaaca0a791dd, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5755,7 +5779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9160150314629215186, guid: b9994c27bd23eb74ea7d75ec5e126670, type: 3}
       propertyPath: speed
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 9160150314629215186, guid: b9994c27bd23eb74ea7d75ec5e126670, type: 3}
       propertyPath: torchImage

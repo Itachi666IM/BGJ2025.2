@@ -135,6 +135,7 @@ MonoBehaviour:
   torchImage: {fileID: 0}
   torchOff: {fileID: 21300000, guid: a03eda07f59e30a45b7cf8272689a0cb, type: 3}
   torchOn: {fileID: 21300000, guid: 9a1a359ffb99a1749ba9e17478cc3179, type: 3}
+  torchSound: {fileID: 8300000, guid: 645f9eb6a0f83514192c9e930108a7fd, type: 3}
 --- !u!143 &832909276668916775
 CharacterController:
   m_ObjectHideFlags: 0

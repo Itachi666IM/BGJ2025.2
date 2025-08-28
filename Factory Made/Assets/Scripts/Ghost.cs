@@ -42,8 +42,8 @@ public class Ghost : MonoBehaviour
     public void GhostDeath()
     {
         anim.SetTrigger("dead");
-        levelManager.PlaySoundEffect(deathSound);
-        Invoke(nameof(KillGhost), 1f);
+        
+        Invoke(nameof(KillGhost), 0.5f);
         if(ghostDeathEvent != null && newObjective != null && !once)
         {
             once = true;
@@ -54,6 +54,7 @@ public class Ghost : MonoBehaviour
 
     public void KillGhost()
     {
+        levelManager.PlaySoundEffect(deathSound);
         Destroy(gameObject);
     }
 

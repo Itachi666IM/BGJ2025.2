@@ -188,6 +188,7 @@ MonoBehaviour:
   trashText: {fileID: 428627188}
   trashEndSceneText: {fileID: 1275957469}
   thudSound: {fileID: 8300000, guid: 689d3b289ddb47e4599a85f0e041fd9a, type: 3}
+  applause: {fileID: 8300000, guid: e0cf574a29e35d0498153babc06e4a77, type: 3}
   sentences:
   - Alright! That is enough for today.
   - Let's put everything in place and head home...
