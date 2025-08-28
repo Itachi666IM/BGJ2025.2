@@ -25,6 +25,7 @@ public class StoryDialogManager : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         sfxPlayer = FindFirstObjectByType<SFX>();
         StartCoroutine(Type());
 
