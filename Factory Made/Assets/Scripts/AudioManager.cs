@@ -35,9 +35,13 @@ public class AudioManager : MonoBehaviour
         {
             myAudio.clip = horrorMusic;
         }
-        if(SceneManager.GetActiveScene().name == "FactoryLevel")
+        else if(SceneManager.GetActiveScene().name == "FactoryLevel")
         {
             myAudio.clip = factoryMusic;
+        }
+        else
+        {
+            myAudio.clip = menuMusic;
         }
         if (!myAudio.isPlaying)
         {

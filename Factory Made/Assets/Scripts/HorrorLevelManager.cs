@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class HorrorLevelManager : MonoBehaviour
 {
@@ -48,6 +48,16 @@ public class HorrorLevelManager : MonoBehaviour
             }
             
         }
+    }
+
+    void WinScene()
+    {
+        SceneManager.LoadScene("Win");
+    }
+
+    public void DelayInLoadingScene()
+    {
+        Invoke(nameof(WinScene), 1f);
     }
 
 }

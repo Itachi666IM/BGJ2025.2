@@ -14,6 +14,9 @@ public class StoryDialogManager : MonoBehaviour
     public TMP_Text textArea;
     public GameObject continueButton;
     public GameObject startGameButton;
+
+
+    [SerializeField] GameObject exitGameButton;
     private int index;
 
     private SFX sfxPlayer;
@@ -21,8 +24,10 @@ public class StoryDialogManager : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         sfxPlayer = FindFirstObjectByType<SFX>();
         StartCoroutine(Type());
+
     }
 
     IEnumerator Type()
@@ -66,6 +71,10 @@ public class StoryDialogManager : MonoBehaviour
         else if (textArea.text == sentences[index] && index == sentences.Length - 1)
         {
             startGameButton.SetActive(true);
+            if(exitGameButton != null)
+            {
+                exitGameButton.SetActive(true);
+            }
         }
     }
 
@@ -76,5 +85,10 @@ public class StoryDialogManager : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }
