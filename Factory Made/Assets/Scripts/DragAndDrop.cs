@@ -4,9 +4,8 @@ public class DragAndDrop : MonoBehaviour
 {
     private bool isDragging = false;
     private Rigidbody currentlyDraggedRigidbody;
-    private Vector3 offset;
-    //private int originalLayer;
-
+    private int originalLayer;
+    private Vector3 targetPosition;
     [Header("Smooth Movement")]
     public float smoothSpeed = 5f;
 
@@ -34,9 +33,8 @@ public class DragAndDrop : MonoBehaviour
                         //int temporaryLayer = LayerMask.NameToLayer("TemporaryLayer");
                         //currentlyDraggedRigidbody.gameObject.layer = temporaryLayer;
 
-                        offset = currentlyDraggedRigidbody.transform.position - hit.point;
-
                         currentlyDraggedRigidbody.isKinematic = true;
+
                     }
                 }
             }
@@ -44,9 +42,9 @@ public class DragAndDrop : MonoBehaviour
 
         if (isDragging && currentlyDraggedRigidbody != null)
         {
-            Vector3 targetPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, Camera.main.transform.position.y));
+            targetPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, Camera.main.transform.position.y));
 
-            MoveWithCollisions(targetPosition);
+            //MoveWithCollisions(targetPosition);
 
             if (Input.GetMouseButtonUp(0))
             {
@@ -59,8 +57,16 @@ public class DragAndDrop : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (targetPosition != null && currentlyDraggedRigidbody!=null)
+        {
+            MoveWithCollisions(targetPosition);
+        }
+    }
+
     private void MoveWithCollisions(Vector3 targetPosition)
     {
-        currentlyDraggedRigidbody.MovePosition(Vector3.Lerp(currentlyDraggedRigidbody.transform.position, targetPosition, smoothSpeed * Time.deltaTime));
+        currentlyDraggedRigidbody.MovePosition(Vector3.Lerp(currentlyDraggedRigidbody.transform.position, targetPosition, smoothSpeed * Time.fixedDeltaTime));
     }
 }
