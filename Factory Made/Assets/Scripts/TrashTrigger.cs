@@ -7,6 +7,8 @@ public class TrashTrigger : MonoBehaviour
 {
     [SerializeField] private TMP_Text trashText;
     [SerializeField] private TMP_Text trashEndSceneText;
+    [SerializeField] private AudioClip thudSound;
+    private SFX sfxPlayer;
     public string[] sentences;
     private int totalTrash;
     private int currentTrash;
@@ -16,6 +18,7 @@ public class TrashTrigger : MonoBehaviour
 
     private void Awake()
     {
+        sfxPlayer = FindFirstObjectByType<SFX>();
         totalTrash = FindObjectsByType<Trash>(FindObjectsSortMode.None).Length;
         currentTrash = 0;
     }
@@ -36,6 +39,7 @@ public class TrashTrigger : MonoBehaviour
     {
         if (other.tag == "drag")
         {
+            sfxPlayer.PlayAnySFX(thudSound);
             currentTrash++;
             Destroy(other);
             UpdateTrashText();
