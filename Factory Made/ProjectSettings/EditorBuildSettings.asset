@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Horror_Scene.unity
     guid: c22bf6a782790284aa6ce19fcd84124e
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 3646e6677cb38b8488c36f1f70ed2edc
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 35437ce9f98339c4b955c90727c57197
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

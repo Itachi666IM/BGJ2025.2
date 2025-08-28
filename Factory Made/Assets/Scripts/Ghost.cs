@@ -61,7 +61,7 @@ public class Ghost : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Lose");
         }
     }
 }
