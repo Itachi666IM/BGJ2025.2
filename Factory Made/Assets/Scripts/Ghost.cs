@@ -10,7 +10,9 @@ public class Ghost : MonoBehaviour
     public bool isChasingPlayer = false;
     Rigidbody rb;
     PlayerMovement player;
-    [SerializeField] float speed;
+    [SerializeField] float minSpeed;
+    [SerializeField] float maxSpeed;
+    float speed;
     bool once;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +21,7 @@ public class Ghost : MonoBehaviour
         levelManager = FindAnyObjectByType<HorrorLevelManager>();
         rb = GetComponent<Rigidbody>();
         player = FindAnyObjectByType<PlayerMovement>();
+        speed = Random.Range(minSpeed, maxSpeed);
     }
 
     private void Update()

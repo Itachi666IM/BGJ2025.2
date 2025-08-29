@@ -445,7 +445,8 @@ MonoBehaviour:
   ghostDeathEvent: {fileID: 0}
   newObjective: {fileID: 0}
   isChasingPlayer: 0
-  speed: 5
+  minSpeed: 5
+  maxSpeed: 10
 --- !u!54 &1826231301385391729
 Rigidbody:
   m_ObjectHideFlags: 0
